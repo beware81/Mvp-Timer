@@ -1,0 +1,44 @@
+dependencies:
+  discord.io: github.com/izy521/discord.io/1b17c8617d402b48b86ca5dbde4121b8ffc7e0e4
+packages:
+  /cjopus/0.0.4:
+    dev: false
+    resolution:
+      integrity: sha1-RvPPyWuD99eERt6LTP2ZS1iJqaA=
+  /options/0.0.6:
+    dev: false
+    engines:
+      node: '>=0.4.0'
+    resolution:
+      integrity: sha1-7CLTEoBrtT5zF3Pnza788cZDEo8=
+  /tweetnacl/0.14.5:
+    dev: false
+    resolution:
+      integrity: sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
+  /ultron/1.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-rOEWq1V80Zc4ak6I9GhTeMiy5Po=
+  /ws/1.1.5:
+    dependencies:
+      options: 0.0.6
+      ultron: 1.0.2
+    dev: false
+    resolution:
+      integrity: sha512-o3KqipXNUdS7wpQzBHSe180lBGO60SoK0yVo3CYJgb2MkobuWuBX6dhkYP5ORCLd55y+SaflMOV5fqAB53ux4w==
+  github.com/izy521/discord.io/1b17c8617d402b48b86ca5dbde4121b8ffc7e0e4:
+    dependencies:
+      cjopus: 0.0.4
+      tweetnacl: 0.14.5
+      ws: 1.1.5
+    dev: false
+    name: discord.io
+    resolution:
+      registry: 'https://registry.npmjs.org/'
+      tarball: 'https://codeload.github.com/izy521/discord.io/tar.gz/1b17c8617d402b48b86ca5dbde4121b8ffc7e0e4'
+    version: 2.5.3
+registry: 'https://registry.npmjs.org/'
+shrinkwrapMinorVersion: 9
+shrinkwrapVersion: 3
+specifiers:
+  discord.io: 'github:izy521/discord.io'
