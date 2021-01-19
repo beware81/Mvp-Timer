@@ -1,72 +1,33 @@
 {
   "AMON_RA": {
-    "min": 120,
-    "max": 140,
+    "min": 60,
+    "max": 70,
     "map": "moc_pryd06"
   },
   "AMON": "AMON_RA",
-  "ATROCE1": {
-    "min": 240,
-    "max": 250,
-    "map": "ra_fild02"
-  },
-  "ATROCE2": {
-    "min": 180,
-    "max": 190,
-    "map": "ra_fild03"
-  },
-  "ATROCE3": {
-    "min": 300,
-    "max": 310,
-    "map": "ra_fild04"
-  },
-  "ATROCE4": {
-    "min": 180,
-    "max": 190,
-    "map": "ve_fild01"
-  },
-  "ATROCE5": {
-    "min": 360,
-    "max": 370,
-    "map": "ve_fild02"
-  },
   "BACSOJIN": {
     "min": 117,
     "max": 127,
     "map": "lou_dun03"
   },
-  "WHITE_LADY": "BACSOJIN",
+  "WHITE": "BACSOJIN",
   "BAPHOMET": {
-    "min": 60,
-    "max": 70,
-    "map": "prt_maze03"
-  },
-  "BEELZEBUB": {
-    "min": 720,
-    "max": 730,
-    "map": "abbey03"
-  },
-  "BEEL": "BEELZEBUB",
-  "BOITATA": {
     "min": 120,
     "max": 130,
-    "map": "bra_dun02"
+    "map": "prt_maze03"
   },
+  "BAPHO": "BAPHOMET",
   "BIO": {
     "min": 100,
     "max": 130,
     "map": "lhz_dun03"
   },
-  "ASSASSIN_CROSS_EREMES": "BIO",
-  "LORD_KNIGHT_SEYREN": "BIO",
-  "SNIPER_SHECIL": "BIO",
-  "SNIPER_CECIL": "BIO",
-  "HIGH_WIZARD_KATRINN": "BIO",
-  "HIGH_WIZARD_KATHRYNE": "BIO",
-  "HIGH_PRIEST_MAGALETA": "BIO",
-  "HIGH_PRIEST_MARGARETHA": "BIO",
-  "WHITESMITH_HARWORD": "BIO",
-  "WHITESMITH_HORWARD": "BIO",
+  "ASSA": "BIO",
+  "LORD": "BIO",
+  "SNIPER": "BIO",
+  "HIGH_WIZARD": "BIO",
+  "HIGH_PRIEST": "BIO",
+  "WHITESMITH": "BIO",
   "DARK_LORD": {
     "min": 60,
     "max": 70,
@@ -82,60 +43,40 @@
     "max": 130,
     "map": "gef_dun02"
   },
+  "DOPPEL": "DOPPELGANGER",
   "DRACULA": {
-    "min": 120,
-    "max": 130,
+    "min": 60,
+    "max": 70,
     "map": "gef_dun01"
   },
   "DRAKE": {
-    "min": 60,
-    "max": 70,
+    "min": 120,
+    "max": 130,
     "map": "treasure02"
   },
   "EDDGA": {
-    "min": 60,
-    "max": 70,
-    "map": "pay_fild10"
+    "min": 120,
+    "max": 130,
+    "map": "pay_fild11"
   },
   "EVIL_SNAKE_LORD": {
     "min": 94,
     "max": 104,
     "map": "gon_dun03"
   },
-  "FALLEN_BISHOP_HIBRAM": {
-    "min": 120,
-    "max": 130,
-    "map": "abbey02"
-  },
-  "HIBRAM": "FALLEN_BISHOP_HIBRAM",
+  "EVIL": "EVIL_SNAKE_LORD",
   "GARM": {
     "min": 120,
     "max": 130,
     "map": "xmas_fild01"
   },
   "HATII": "GARM",
-  "GLOOM_UNDER_NIGHT": {
-    "min": 300,
-    "max": 310,
-    "map": "ra_san05"
-  },
-  "GLOOM": "GLOOM_UNDER_NIGHT",
   "GOLDEN_THIEF_BUG": {
     "min": 60,
     "max": 70,
     "map": "prt_sewb4"
   },
   "GTB": "GOLDEN_THIEF_BUG",
-  "GOPINICH": {
-    "min": 120,
-    "max": 130,
-    "map": "mosk_dun03"
-  },
-  "IFRIT": {
-    "min": 660,
-    "max": 670,
-    "map": "thor_v3"
-  },
   "INCANTATION_SAMURAI": {
     "min": 91,
     "max": 101,
@@ -164,13 +105,13 @@
   },
   "LOD": "LORD_OF_DEATH",
   "MAYA": {
-    "min": 60,
-    "max": 90,
+    "min": 120,
+    "max": 130,
     "map": "anthell02"
   },
   "MISTRESS": {
-    "min": 60,
-    "max": 70,
+    "min": 120,
+    "max": 130,
     "map": "mjolnir_04"
   },
   "MISSY": "MISTRESS",
@@ -186,14 +127,14 @@
     "map": "gef_fild14"
   },
   "ORC_HERO2": {
-    "min": 40,
-    "max": 50,
+    "min": 1440,
+    "max": 1450,
     "map": "gef_fild02"
   },
   "ORC_LORD": {
-    "min": 60,
-    "max": 90,
-    "map": "orcsdun02"
+    "min": 120,
+    "max": 130,
+    "map": "gef_fild10"
   },
   "OSIRIS": {
     "min": 60,
@@ -206,9 +147,14 @@
     "map": "in_sphinx5"
   },
   "PHREEONI": {
-    "min": 60,
-    "max": 90,
-    "map": "anthell01"
+    "min": 120,
+    "max": 130,
+    "map": "moc_fild15"
+  },
+  "PHREEONI2": {
+    "min": 120,
+    "max": 130,
+    "map": "moc_fild17"
   },
   "RSX_0806": {
     "min": 125,
@@ -232,34 +178,21 @@
     "max": 70,
     "map": "tur_dun04"
   },
-  "TG": "TURTLE_GENERAL",
-  "VALKYRIE_RANDGRIS": {
-    "min": 480,
-    "max": 490,
-    "map": "odin_tem03"
-  },
-  "RANDGRIS": "VALKYRIE_RANDGRIS",
+  "TURTLE": "TURTLE_GENERAL",
   "VESPER": {
     "min": 120,
     "max": 130,
     "map": "jupe_core"
   },
-  "WOUNDED_MORROC": {
-    "min": 720,
-    "max": 780,
-    "map": "moc_fild22"
-  },
-  "WSM": "WOUNDED_MORROC",
-  "WOUNDED": "WOUNDED_MORROC",
   "YGNIZEM": {
     "min": 120,
     "max": 130,
     "map": "lhz_dun02"
   },
-  "EGNIGEM_CENIA": "YGNIZEM",
+  "EGNIGEM": "YGNIZEM",
   "ANGELING1": {
-    "min": 45,
-    "max": 75,
+    "min": 60,
+    "max": 90,
     "map": "pay_fild04"
   },
   "ANGELING2": {
@@ -268,24 +201,14 @@
     "map": "xmas_dun01"
   },
   "ANGELING3": {
-    "min": 30,
-    "max": 45,
-    "map": "mjolnir_10"
+    "min": 60,
+    "max": 90,
+    "map": "yuno_fild03"
   },
   "ARCHANGELING": {
     "min": 60,
     "max": 63,
     "map": "yuno_fild05"
-  },
-  "BYORGUE1": {
-    "min": 60,
-    "max": 60,
-    "map": "thor_v01"
-  },
-  "BYORGUE2": {
-    "min": 30,
-    "max": 30,
-    "map": "thor_v03"
   },
   "CAT_O_NINE_TAIL": {
     "min": 60,
@@ -293,9 +216,14 @@
     "map": "pay_dun04"
   },
   "DEVILING1": {
-    "min": 45,
-    "max": 75,
+    "min": 120,
+    "max": 180,
     "map": "pay_fild04"
+  },
+    "DEVILING2": {
+    "min": 60,
+    "max": 90,
+    "map": "yuno_fild03"
   },
   "DRAGON_FLY": {
     "min": 60,
@@ -304,44 +232,23 @@
   },
   "CLIP": "DRAGON_FLY",
   "GHOSTRING1": {
-    "min": 45,
-    "max": 75,
+    "min": 60,
+    "max": 90,
     "map": "pay_fild04"
   },
   "GHOSTRING2": {
-    "min": 240,
-    "max": 360,
-    "map": "gld_dun04"
+    "min": 113,
+    "max": 170,
+    "map": "gprt_maze03"
   },
   "GHOSTRING3": {
     "min": 33,
     "max": 53,
-    "map": "treasure01"
-  },
-  "HARDROCK_MAMMOTH": {
-    "min": 240,
-    "max": 240,
-    "map": "man_fild03"
+    "map": "treasure02"
   },
   "MAYA_PURPLE": {
-    "min": 60,
-    "max": 90,
+    "min": 120,
+    "max": 180,
     "map": "anthell01"
-  },
-  "TENDRILLION": {
-    "min": 60,
-    "max": 60,
-    "map": "spl_fild03"
-  },
-  "TENDRILION": "TENDRILLION",
-  "VALKYRIE1": {
-    "min": 90,
-    "max": 120,
-    "map": "odin_tem02"
-  },
-  "VALKYRIE2": {
-    "min": 30,
-    "max": 50,
-    "map": "odin_tem03"
-  }  
+  }
 }
