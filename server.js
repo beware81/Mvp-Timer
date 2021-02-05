@@ -44,7 +44,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
           return 0;
         })
       let msg = sortedList.map(mvp => (mvp[1]['min'] - Math.floor((new Date() - new Date(mvp[1]['death'])) / 60000)) + ' min ' + fancyName(mvp[0]) + ' (' + mvp[1]['map'] + ')\n').join('')
-      if (sortedList.length == 0) msg = 'No records found'
+      if (sortedList.length == 0) msg = 'Tienes que indicar la hora de la muerte. "hh:mm" '
       bot.sendMessage({
         to: channelID,
         message: msg
@@ -91,7 +91,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
       } else {
         let now = new Date();
         // adding 3 minutes offset to server time
-        death = Date.parse(`${now.toDateString()} ${timestring} GMT`) - ((timeoffset * 60 * 60 * 1000) + (3 * 60 * 1000))
+        //comentando la linea siguiente cuenta la hora de la muerte justo al horario España
+        //death = Date.parse(`${now.toDateString()} ${timestring} GMT`) - ((timeoffset * 60 * 60 * 1000) + (3 * 60 * 1000))
       }
     }
 
@@ -102,7 +103,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
       mvp = resolveAlias(MVP[mvp])
       bot.sendMessage({
         to: channelID,
-        message: `*${fancyName(alias)}* alias for *${fancyName(mvp)}*\n`
+        message: `*${fancyName(alias)}* alias *${fancyName(mvp)}*\n @Beware alguien ha usado el bot.`
       })
     }
 
@@ -111,7 +112,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     })
 
     if (candidates[0] !== mvp) {
-      msg += (candidates.length == 0) ? `Baka, there is no mvp named *${fancyName(mvp)}*` : 'Baka, did you mean?\n'
+      msg += (candidates.length == 0) ? `Primo, no hay ningun MVP con el nombre de *${fancyName(mvp)}*` : 'Baka, did you mean?\n'
       candidates.forEach(name => {
         let resolved = resolveAlias(name)
         msg += `${fancyName(name)}${(resolved != name) ? ' (Alias for ' + fancyName(resolved) + ')' : ''} (${MVP[resolved]['map']})\n`
@@ -131,15 +132,19 @@ bot.on('message', function (user, userID, channelID, message, evt) {
           let deadForMin = Math.floor((new Date() - new Date(MVP[mvp]['death'])) / 60000);
           let minRespawnInMin = MVP[mvp]['min'] - deadForMin;
           // adding 3 minutes offset to server time
-          let servertime = new Date(death + (timeoffset * 60 * 60 * 1000) + (3 * 60 * 1000))
+          //comentada la linea para que salga la hora del servidor España
+          //let servertime = new Date(death + (timeoffset * 60 * 60 * 1000) + (3 * 60 * 1000))
+          let servertime = new Date(death+3600000)
           servertime = servertime.toTimeString('UTC').split(':').slice(0,2).join(':')
           bot.sendMessage({
             to: channelID,
-            message: `${fancyName(mvp)} was killed at ${servertime} (servertime for ROPS) will remind you in ${minRespawnInMin - 5} minutes.\n`
+            message: `${fancyName(mvp)} ha muerto a las ${servertime} (hora España) y respawneara en ${minRespawnInMin - 10} minutos.\n`
           });
         }
       if (MVP[mvp]['death']) {
         let deadForMin = Math.floor((new Date() - new Date(MVP[mvp]['death'])) / 60000);
+        let prueba = time;
+        let minMPVReal =  new Date(death + (timeoffset * 60 * 60 * 1000) + (3 * 60 * 1000));
         let minRespawnInMin = MVP[mvp]['min'] - deadForMin;
         let maxRespawnInMin = MVP[mvp]['max'] - deadForMin;
         if (minRespawnInMin == maxRespawnInMin) {
@@ -153,13 +158,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         }
         bot.sendMessage({
           to: channelID,
-          message: `${fancyName(mvp)} could respawn between ${minRespawnInMin} and ${maxRespawnInMin} minutes!`
+          message: `${fancyName(mvp)} tiene un tiempo de respawn entre ${minRespawnInMin} y ${maxRespawnInMin} minutos!`
         }, (error, result) => {
           MVP[mvp]['msgID'] = result.id,
             MVP[mvp]['channelID'] = channelID
         });
       } else {
-        msg += 'No record found\n'
+        msg += 'Tienes que indicar la hora de la muerte. "HH:MM"\n'
       }
 
     }
@@ -186,8 +191,6 @@ function resolveAlias(mvp) {
     return mvp
   }
 }
-<<<<<<< HEAD
-=======
 
 function minuteCallback() {
     for (let key in MVP) {
@@ -221,7 +224,7 @@ function minuteCallback() {
         }
 
         if (MVP[key]['msgID']) {
-          let msg = (minRespawnInMin == maxRespawnInMin) ? `${fancyName(key)} will respawn in ${minRespawnInMin}!` : `${fancyName(key)} could respawn between ${minRespawnInMin} and ${maxRespawnInMin} minutes!`
+          let msg = (minRespawnInMin == maxRespawnInMin) ? `${fancyName(key)} will respawn in ${minRespawnInMin}!` : `${fancyName(key)} respawneara en ${minRespawnInMin} o ${maxRespawnInMin} minutos!`
           bot.editMessage({
             channelID: MVP[key]['channelID'],
             messageID: MVP[key]['msgID'],
@@ -235,4 +238,3 @@ function minuteCallback() {
     }
   }
 require("http").createServer(async (req,res) => { res.statusCode = 200; res.write("ok"); res.end(); }).listen(3000, () => console.log("Now listening on port 3000"));
->>>>>>> glitch
